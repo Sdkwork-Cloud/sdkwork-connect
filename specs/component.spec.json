@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.spec",
+  "component": {
+    "name": "sdkwork-connect",
+    "displayName": "SDKWork Connect",
+    "version": "0.1.0",
+    "type": "rust-crate",
+    "root": "sdkwork-connect",
+    "domain": "device",
+    "capability": "connect",
+    "surface": "host-native",
+    "languages": [
+      "rust",
+      "typescript"
+    ],
+    "generated": false,
+    "manifests": []
+  },
+  "canonicalSpecs": [
+    {
+      "file": "COMPONENT_SPEC.md",
+      "path": "../sdkwork-specs/COMPONENT_SPEC.md",
+      "purpose": "Component-local contract and discovery rules."
+    },
+    {
+      "file": "MODULE_SPEC.md",
+      "path": "../sdkwork-specs/MODULE_SPEC.md",
+      "purpose": "Reusable module contract, public exports, and dependency direction."
+    },
+    {
+      "file": "CODE_STYLE_SPEC.md",
+      "path": "../sdkwork-specs/CODE_STYLE_SPEC.md",
+      "purpose": "Authored source structure and generated code boundaries."
+    },
+    {
+      "file": "NAMING_SPEC.md",
+      "path": "../sdkwork-specs/NAMING_SPEC.md",
+      "purpose": "Canonical SDKWork naming rules."
+    },
+    {
+      "file": "DOMAIN_SPEC.md",
+      "path": "../sdkwork-specs/DOMAIN_SPEC.md",
+      "purpose": "Canonical device domain boundary."
+    },
+    {
+      "file": "DESKTOP_APP_ARCHITECTURE_SPEC.md",
+      "path": "../sdkwork-specs/DESKTOP_APP_ARCHITECTURE_SPEC.md",
+      "purpose": "Desktop/Tauri host boundary and native capability rules."
+    },
+    {
+      "file": "DEPENDENCY_MANAGEMENT_SPEC.md",
+      "path": "../sdkwork-specs/DEPENDENCY_MANAGEMENT_SPEC.md",
+      "purpose": "Cross-repository source dependency rules."
+    },
+    {
+      "file": "RUST_CODE_SPEC.md",
+      "path": "../sdkwork-specs/RUST_CODE_SPEC.md",
+      "purpose": "Rust crate and module rules."
+    },
+    {
+      "file": "TYPESCRIPT_CODE_SPEC.md",
+      "path": "../sdkwork-specs/TYPESCRIPT_CODE_SPEC.md",
+      "purpose": "TypeScript package and public export rules."
+    },
+    {
+      "file": "TEST_SPEC.md",
+      "path": "../sdkwork-specs/TEST_SPEC.md",
+      "purpose": "Verification and contract testing expectations."
+    }
+  ],
+  "contracts": {
+    "publicExports": [],
+    "runtimeEntrypoints": [],
+    "routeManifest": null,
+    "sdkClients": [],
+    "sdkDependencies": [],
+    "dependencyApiExports": [],
+    "dependencyApiSurfaces": [],
+    "events": [
+      "sdkwork.connect.node.status.changed",
+      "sdkwork.connect.peer.discovered",
+      "sdkwork.connect.peer.connected",
+      "sdkwork.connect.peer.disconnected",
+      "sdkwork.connect.channel.requested",
+      "sdkwork.connect.transfer.offered",
+      "sdkwork.connect.transfer.progress",
+      "sdkwork.connect.transfer.completed",
+      "sdkwork.connect.transfer.failed"
+    ],
+    "configKeys": []
+  },
+  "verification": {
+    "commands": [
+      "powershell -NoProfile -Command \"Get-Content specs/component.spec.json -Raw | ConvertFrom-Json | Out-Null\""
+    ]
+  },
+  "notes": {
+    "layout": "Top-level packages are application-neutral contracts, clients, and adapters only. SDKWork Connect runnable PC application content belongs under apps/sdkwork-connect-pc when introduced.",
+    "design": "docs/superpowers/specs/2026-06-11-sdkwork-connect-device-connect-design.md"
+  }
+}
