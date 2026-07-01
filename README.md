@@ -1,4 +1,5 @@
 # sdkwork-connect
+repository-kind: application
 
 - [apps directory index](apps/README.md)
 
